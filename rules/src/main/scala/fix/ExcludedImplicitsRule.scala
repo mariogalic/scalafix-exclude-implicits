@@ -39,7 +39,7 @@ class ExcludedImplicitsRule(config: ExcludedImplicitsRuleConfig)
         val isImplicit = struct.contains("implicit")
         val excludedImplicit = config.blacklist.find(struct.contains)
         if (isImplicit && excludedImplicit.isDefined)
-          Patch.lint(ExcludedImplicitsDiagnostic(term, excludedImplicit.getOrElse(excludedImplicit.mkString(","))))
+          Patch.lint(ExcludedImplicitsDiagnostic(term, excludedImplicit.getOrElse(config.blacklist.mkString(","))))
         else
           Patch.empty
     }.asPatch

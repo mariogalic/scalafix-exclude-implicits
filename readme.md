@@ -29,6 +29,8 @@ scalacOptions ++= List(
     )
 ```
 
+Publish locally with `sbt rules/publishLocal`
+
 Code is based on:
 * Project was created via `sbt new scalacenter/scalafix.g8`
 * https://scalacenter.github.io/scalafix/docs/developers/tutorial.html

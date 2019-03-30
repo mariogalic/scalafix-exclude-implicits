@@ -9,10 +9,7 @@ package fix
 
 import scala.io.Codec
 
-object ExcludedImplicitsRule {
-  Foo.bar
-}
-
-object Foo {
-  def bar(implicit codec: Codec): Int = 3
+object Hello {
+  def foo(implicit codec: Codec) = 3
+  foo
 }
